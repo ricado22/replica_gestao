@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- Title -->
+    <title>{% block title %}Sistema de Gerenciamento de Recursos{% endblock %}</title>
+
+    <!-- Favicon foto -->
+
+
+    <!-- Arquivos CSS bootstrap  master  aos -->
+
+
+    {% block styles %}{% endblock %}
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="https://pythonacademy.com.br/jornada-python/">
+
+
+
+
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'startup:index' %}">Página Inicial</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'startup:lista_funcionarios' %}">Funcionários</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'startup:lista_produtos' %}">Produtos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'startup:lista_vendas' %}">Vendas</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav float-right">
+                    <li class="nav-item">
+
+
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div data-aos="fade-in" data-aos-duration="1000">
+        <!-- Conteúdo do site -->
+        {% block conteudo %}{% endblock %}
+    </div>
+
+    <!-- Scripts .js -->
+
+
+    {% block scripts %}{% endblock %}
+
+
+
+    <script type="application/javascript">
+        AOS.init();
+    </script>
+</body>
+
+</html>
